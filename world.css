@@ -1,1 +1,129 @@
-/* Add your own styles */
+
+:root {
+  --orange: #f26b1d;
+  --orange-dark: #c95512;
+  --orange-light: #fff1e6;
+  --white: #ffffff;
+  --text: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: var(--orange-light);
+}
+
+/* Header bar */
+header {
+  background: var(--orange);
+  color: var(--white);
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+main {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+/* Search controls */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+#controls label {
+  font-weight: 600;
+  color: var(--orange-dark);
+}
+
+#country {
+  flex: 1 1 240px;
+  max-width: 360px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 2px solid var(--orange);
+  border-radius: 6px;
+  background: var(--white);
+}
+
+#country:focus {
+  outline: none;
+  border-color: var(--orange-dark);
+  box-shadow: 0 0 0 3px rgba(242, 107, 29, 0.25);
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--orange);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button:hover {
+  background: var(--orange-dark);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--orange-dark);
+  outline-offset: 2px;
+}
+
+/* Results table */
+#result {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+#result:empty {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: var(--orange);
+  color: var(--white);
+  text-align: left;
+  padding: 12px 14px;
+}
+
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f3d9c6;
+}
+
+tbody tr:nth-child(even) {
+  background: var(--orange-light);
+}
+
+tbody tr:hover {
+  background: #ffe0c8;
+}
